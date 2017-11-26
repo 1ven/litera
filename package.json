@@ -1,0 +1,17 @@
+{
+	"name": "litera",
+	"version": "1.0.0",
+	"description": "Http server adapter with FP interface",
+	"main": "index.js",
+	"author": "1ven <1ven.mironchik@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32",
+    "@babel/register": "^7.0.0-beta.32"
+  }
+}
