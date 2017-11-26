@@ -1,0 +1,14 @@
+{
+  "name": "litera",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "server",
+    "http",
+    "functional"
+  ],
+  "dependencies": {
+    "is-plain-object": "^2.0.4"
+  }
+}
