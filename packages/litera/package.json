@@ -1,13 +1,19 @@
 {
   "name": "litera",
   "version": "1.0.0",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "license": "MIT",
+  "files": [
+    "lib/"
+  ],
   "keywords": [
     "server",
     "http",
     "functional"
   ],
+  "scripts": {
+    "prepublish": "babel ./src/index.js"
+  },
   "dependencies": {
     "is-plain-object": "^2.0.4"
   }

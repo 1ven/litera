@@ -1,13 +1,19 @@
 {
   "name": "litera-router",
   "version": "1.0.0",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "license": "MIT",
+  "files": [
+    "lib/"
+  ],
   "keywords": [
     "router",
     "http",
     "functional"
   ],
+  "scripts": {
+    "prepublish": "babel ./src/index.js"
+  },
   "dependencies": {
     "lodash.omit": "^4.5.0",
     "url-pattern": "^1.0.3"
