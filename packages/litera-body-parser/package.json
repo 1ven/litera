@@ -1,0 +1,19 @@
+{
+  "name": "litera-body-parser",
+  "version": "1.0.1",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "body",
+    "parser"
+  ],
+  "scripts": {
+    "prepublish": "../../node_modules/.bin/babel ./src --out-dir ./lib"
+  },
+  "dependencies": {
+    "content-type": "^1.0.4"
+  }
+}
