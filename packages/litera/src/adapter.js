@@ -1,6 +1,6 @@
 import { isResponse } from "./utils";
 
-export default (atom, enhancers = []) => (nodeReq, nodeRes) => {
+export default atom => (nodeReq, nodeRes) => {
   let temp = [];
   nodeReq
     .on("error", err => {
