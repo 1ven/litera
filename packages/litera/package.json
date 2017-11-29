@@ -12,8 +12,8 @@
     "functional"
   ],
   "scripts": {
-    "preversion": "../../node_modules/.bin/babel ./src --out-dir ./lib && npm publish",
-    "postversion": "git push && git push --tags"
+    "preversion": "../../node_modules/.bin/babel ./src --out-dir ./lib",
+    "postversion": "npm publish && git push && git push --tags"
   },
   "dependencies": {
     "is-plain-object": "^2.0.4"
