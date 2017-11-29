@@ -1,0 +1,16 @@
+{
+  "name": "litera-cors",
+  "version": "1.0.1",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "cors",
+    "middleware"
+  ],
+  "scripts": {
+    "build": "../../node_modules/.bin/babel ./src --out-dir ./lib"
+  }
+}
