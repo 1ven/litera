@@ -1,6 +1,6 @@
 {
   "name": "litera",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "main": "./lib/index.js",
   "license": "MIT",
   "files": [
@@ -12,7 +12,8 @@
     "functional"
   ],
   "scripts": {
-    "prepublish": "../../node_modules/.bin/babel ./src --out-dir ./lib"
+    "preversion": "../../node_modules/.bin/babel ./src --out-dir ./lib && npm publish",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "is-plain-object": "^2.0.4"
