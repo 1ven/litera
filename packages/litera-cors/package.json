@@ -11,6 +11,6 @@
     "middleware"
   ],
   "scripts": {
-    "build": "../../node_modules/.bin/babel ./src --out-dir ./lib"
+    "prepublish": "../../node_modules/.bin/babel ./src --out-dir ./lib"
   }
 }
