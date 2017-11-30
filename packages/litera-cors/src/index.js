@@ -1,5 +1,6 @@
 export default atom => async req => {
   const res = await atom(req);
+
   return req.method === "OPTIONS"
     ? {
         status: 204,
