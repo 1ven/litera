@@ -10,7 +10,8 @@
 		"packages/*"
 	],
 	"scripts": {
-		"release": "lerna publish"
+		"release": "lerna publish",
+		"bootstrap": "lerna bootstrap"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.0.0-beta.32",
