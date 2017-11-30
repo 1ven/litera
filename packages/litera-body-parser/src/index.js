@@ -2,9 +2,9 @@ import contentType from "content-type";
 import { json } from "./types";
 
 export default () => atom => req => {
-  const contentType = req.headers["content-type"];
+  const ct = req.headers["content-type"];
 
-  if (!contentType) {
+  if (!ct) {
     return atom(req);
   }
 
