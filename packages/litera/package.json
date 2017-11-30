@@ -1,6 +1,6 @@
 {
   "name": "litera",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "main": "./lib/index.js",
   "license": "MIT",
   "repository": "https://github.com/1ven/litera/tree/master/packages/litera",
