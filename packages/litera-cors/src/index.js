@@ -1,4 +1,4 @@
-export default atom => async req => {
+export default () => atom => async req => {
   const res = await atom(req);
 
   return req.method === "OPTIONS"
