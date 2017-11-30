@@ -12,7 +12,7 @@
     "functional"
   ],
   "scripts": {
-    "prepublish": "../../node_modules/.bin/babel ./src --out-dir ./lib"
+    "prepare": "babel ./src --out-dir ./lib"
   },
   "dependencies": {
     "is-plain-object": "^2.0.4"
