@@ -8,7 +8,7 @@ export default () => atom => req => {
     return atom(req);
   }
 
-  const { type } = contentType.parse(contentType);
+  const { type } = contentType.parse(ct);
 
   switch (type) {
     case "application/json":
