@@ -15,8 +15,7 @@
   "scripts": {
     "build": "babel ./src --out-dir ./lib",
     "clean": "rimraf ./lib",
-    "prepare": "npm run clean && npm run build",
-    "postpublish": "npm run clean"
+    "prepare": "npm run clean && npm run build"
   },
   "dependencies": {
     "lodash.omit": "^4.5.0",
