@@ -1,0 +1,20 @@
+{
+  "name": "litera-error-handler",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "repository": "https://github.com/1ven/litera/tree/master/packages/litera-error-handler",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "error",
+    "handling",
+    "middleware"
+  ],
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib",
+    "clean": "rimraf ./lib",
+    "prepare": "npm run clean && npm run build"
+  }
+}
