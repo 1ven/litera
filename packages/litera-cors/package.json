@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "main": "./lib/index.js",
   "license": "MIT",
+  "repository": "https://github.com/1ven/litera/tree/master/packages/litera-cors",
   "files": [
     "lib/"
   ],
