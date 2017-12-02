@@ -1,15 +1,15 @@
 {
-  "name": "litera-body-parser",
+  "name": "litera-request-body",
   "version": "1.1.9",
   "main": "./lib/index.js",
   "license": "MIT",
-  "repository": "https://github.com/1ven/litera/tree/master/packages/litera-body-parser",
+  "repository": "https://github.com/1ven/litera/tree/master/packages/litera-request-body",
   "files": [
     "lib/"
   ],
   "keywords": [
     "body",
-    "parser"
+    "request"
   ],
   "scripts": {
     "build": "babel ./src --out-dir ./lib",

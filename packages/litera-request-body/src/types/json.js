@@ -1,11 +1,4 @@
-export default req => {
-  return {
-    ...req,
-    body: parse(req.body)
-  };
-};
-
-const parse = body => {
+export default body => {
   if (typeof body === "undefined") {
     return void 0;
   }

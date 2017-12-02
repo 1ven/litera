@@ -1,19 +1,19 @@
 import contentType from "content-type";
 import { json } from "./types";
 
-export default () => atom => req => {
+export const readBody = req => {
   const ct = req.headers["content-type"];
 
   if (!ct) {
-    return atom(req);
+    return req.body;
   }
 
   const { type } = contentType.parse(ct);
 
   switch (type) {
     case "application/json":
-      return atom(json(req));
+      return json(req.body);
     default:
-      return atom(req);
+      return req.body;
   }
 };
