@@ -1,0 +1,18 @@
+{
+  "name": "litera-redirect",
+  "version": "1.1.11",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "repository": "https://github.com/1ven/litera/tree/master/packages/litera-redirect",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "redirect"
+  ],
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib",
+    "clean": "rimraf ./lib",
+    "prepare": "npm run clean && npm run build"
+  }
+}
