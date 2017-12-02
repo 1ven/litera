@@ -18,6 +18,7 @@
     "prepare": "npm run clean && npm run build"
   },
   "dependencies": {
+    "deepmerge": "^2.0.1",
     "is-plain-object": "^2.0.4"
   }
 }
