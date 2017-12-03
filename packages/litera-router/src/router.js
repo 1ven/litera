@@ -1,6 +1,6 @@
 import { notFound, noTrailingSlash, noQueryString } from "./internal";
 
-export default atom => (req, data) => {
+export default atom => async (req, data) => {
   try {
     return atom(req, {
       ...data,
