@@ -1,5 +1,5 @@
-export default () => atom => async req => {
-  const res = await atom(req);
+export default () => (atom, data) => async req => {
+  const res = await atom(req, data);
 
   return req.method === "OPTIONS"
     ? {
