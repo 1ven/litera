@@ -1,0 +1,23 @@
+{
+  "name": "litera-response-body",
+  "version": "1.8.1",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "repository": "https://github.com/1ven/litera/tree/master/packages/litera-response-body",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "body",
+    "json",
+    "xml"
+  ],
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib",
+    "clean": "rimraf ./lib",
+    "prepare": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "mime-types": "^2.1.17"
+  }
+}
