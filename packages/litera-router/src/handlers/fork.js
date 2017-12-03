@@ -1,9 +1,9 @@
 import { notFound } from "../internal";
 
-export default (...routes) => (req, data) => {
-  for (let route of routes) {
+export default (...atoms) => (req, data) => {
+  for (let atom of atoms) {
     try {
-      return route(req, data);
+      return atom(req, data);
     } catch (err) {
       if (err !== notFound) {
         throw err;

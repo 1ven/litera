@@ -1,10 +1,10 @@
 import { notFound, match } from "../internal";
 
-export default (template, route) => (req, data) => {
+export default (template, atom) => (req, data) => {
   const matched = match(template, data.path);
 
   if (matched) {
-    return route(req, {
+    return atom(req, {
       ...data,
       params: {
         ...data.params,
