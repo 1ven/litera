@@ -1,7 +1,8 @@
-export default () => atom => async (req, data) => {
+export default onError => atom => async (req, data) => {
   try {
     return await atom(req, data);
   } catch (err) {
+    onError && onError(err);
     return {
       status: 500,
       body:
