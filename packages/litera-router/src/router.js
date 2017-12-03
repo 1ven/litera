@@ -1,10 +1,11 @@
 import { notFound, noTrailingSlash, noQueryString } from "./internal";
 
-export default route => req => {
+export default atom => (req, data) => {
   try {
-    return route({
+    return atom(req, {
+      ...data,
       path: noTrailingSlash(noQueryString(req.url))
-    })(req);
+    });
   } catch (err) {
     if (err === notFound) {
       return {

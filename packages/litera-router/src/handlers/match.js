@@ -1,13 +1,17 @@
 import { notFound, match } from "../internal";
 
-export default (template, route) => data => req => {
+export default (template, route) => (req, data) => {
   const matched = match(template, data.path);
 
   if (matched) {
-    return route({
-      path: matched.path,
-      params: Object.assign({}, data.params, matched.params)
-    })(req);
+    return route(req, {
+      ...data,
+      params: {
+        ...data.params,
+        ...matched.params
+      },
+      path: matched.path
+    });
   }
 
   throw notFound;

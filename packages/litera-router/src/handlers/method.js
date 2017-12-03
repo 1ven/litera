@@ -1,8 +1,8 @@
 import { notFound } from "../internal";
 
-export default (method, route) => data => req => {
+export default (method, route) => (req, data) => {
   if (method === req.method) {
-    return route(data)(req);
+    return route(req, data);
   }
   throw notFound;
 };
