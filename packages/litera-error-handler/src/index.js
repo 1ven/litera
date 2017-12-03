@@ -1,4 +1,4 @@
-export default () => (atom, data) => async req => {
+export default () => atom => async (req, data) => {
   try {
     return await atom(req, data);
   } catch (err) {
