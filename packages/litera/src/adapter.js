@@ -1,6 +1,6 @@
 import { isResponse } from "./utils";
 
-export default atom => (nodeReq, nodeRes) => {
+export default (atom, initialData = {}) => (nodeReq, nodeRes) => {
   let temp = [];
   nodeReq
     .on("error", err => {
@@ -13,7 +13,7 @@ export default atom => (nodeReq, nodeRes) => {
       const { url, method, headers } = nodeReq;
       const body = Buffer.concat(temp).toString();
 
-      atom({ url, method, headers, body })
+      atom({ url, method, headers, body }, initialData)
         .then(res => {
           if (typeof res === "undefined") {
             throw new Error("No response");
