@@ -1,6 +1,7 @@
+import { curry } from "ramda";
 import { notFound, match } from "../internal";
 
-export default (template, atom) => (req, data) => {
+export default curry((template, atom) => (req, data) => {
   const matched = match(template, data.path);
 
   if (matched) {
@@ -15,4 +16,4 @@ export default (template, atom) => (req, data) => {
   }
 
   throw notFound;
-};
+});
