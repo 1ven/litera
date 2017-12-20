@@ -8,7 +8,7 @@ export default (
       status: 204,
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": allowedHeaders.join(""),
+        "Access-Control-Allow-Headers": config.allowedHeaders.join(""),
         "Access-Control-Allow-Methods": "GET,PUT,PATCH,POST,DELETE,OPTIONS",
         "Content-Length": "0"
       }
