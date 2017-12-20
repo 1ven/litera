@@ -1,21 +1,23 @@
 export default () => atom => async (req, data) => {
+  if (req.method === "OPTIONS") {
+    return {
+      status: 204,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-type,Accept",
+        "Access-Control-Allow-Methods": "GET,PUT,PATCH,POST,DELETE,OPTIONS",
+        "Content-Length": "0"
+      }
+    };
+  }
+
   const res = await atom(req, data);
 
-  return req.method === "OPTIONS"
-    ? {
-        status: 204,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-type,Accept",
-          "Access-Control-Allow-Methods": "GET,PUT,PATCH,POST,DELETE,OPTIONS",
-          "Content-Length": "0"
-        }
-      }
-    : {
-        ...res,
-        headers: {
-          ...res.headers,
-          "Access-Control-Allow-Origin": "*"
-        }
-      };
+  return {
+    ...res,
+    headers: {
+      ...res.headers,
+      "Access-Control-Allow-Origin": "*"
+    }
+  };
 };
