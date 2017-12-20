@@ -1,10 +1,14 @@
-export default () => atom => async (req, data) => {
+export default (
+  config = {
+    allowedHeaders: ["Content-type", "Accept"]
+  }
+) => atom => async (req, data) => {
   if (req.method === "OPTIONS") {
     return {
       status: 204,
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-type,Accept",
+        "Access-Control-Allow-Headers": allowedHeaders.join(""),
         "Access-Control-Allow-Methods": "GET,PUT,PATCH,POST,DELETE,OPTIONS",
         "Content-Length": "0"
       }
